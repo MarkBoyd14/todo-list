@@ -1,6 +1,9 @@
 let todoList = {
   todos: [],
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7f46e64e53f7a8753c7008b2335563e44adb768d
   addTodo(todoText) {
     this.todos.push({
       todoText: todoText,
@@ -8,20 +11,31 @@ let todoList = {
     });
   },
   changeTodo(position, todoText) {
+<<<<<<< HEAD
     this.todos[position - 1].todoText = todoText;
+=======
+    this.todos[position].todoText = todoText;
+>>>>>>> 7f46e64e53f7a8753c7008b2335563e44adb768d
   },
   deleteTodo(position) {
     this.todos.splice(position, 1);
   },
   toggleCompleted(position) {
+<<<<<<< HEAD
     let todo = this.todos[position - 1];
+=======
+    let todo = this.todos[position];
+>>>>>>> 7f46e64e53f7a8753c7008b2335563e44adb768d
     todo.completed = !todo.completed;
   },
 
   toggleAll() {
+<<<<<<< HEAD
     let totalTodos = this.todos.length;
     let completedTodos = 0;
 
+=======
+>>>>>>> 7f46e64e53f7a8753c7008b2335563e44adb768d
     this.todos.forEach((todo) => {
       if (todo.completed) {
         completedTodos++;
@@ -84,9 +98,15 @@ let view = {
       let todoLi = document.createElement('li');
       let todoTextWithCompletion = '';
       if (todo.completed) {
+<<<<<<< HEAD
         todoTextWithCompletion = `${position + 1}. ` + '(x) ' + todo.todoText;
       } else {
         todoTextWithCompletion = `${position + 1}. ` + '( ) ' + todo.todoText;
+=======
+        todoTextWithCompletion = '(x) ' + todo.todoText;
+      } else {
+        todoTextWithCompletion = '( ) ' + todo.todoText;
+>>>>>>> 7f46e64e53f7a8753c7008b2335563e44adb768d
       }
       todoLi.id = position;
       todoLi.textContent = todoTextWithCompletion;
