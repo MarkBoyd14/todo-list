@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Practical JavaScript</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Todo List</h1>
+      <div class="form-control">
+        <label>Add Todo</label>
+        <div class="input-group">
+          <input id="addTodoTextInput" type="text"  placeholder="Todo text..."/>
+          <button onclick="handlers.addTodo()">Add</button>
+        </div>        
+      </div>
+      <div class="form-control">
+        <label>Change Todo</label>
+        <div class="input-group">
+          <input
+          id="changeTodoPositionInput"
+          type="number"
+          name="change-todo-position"
+          placeholder="Todo #"
+          />
+          <input id="changeTodoTextInput" type="text" placeholder="Todo text..." />
+          <button onclick="handlers.changeTodo()">Change Todo</button>
+        </div>   
+      </div>    
+      
+      <div class="form-control">
+        <label>Toggle Todo</label>
+        <div class="input-group">
+          <input id="toggleCompletedPositionInput" type="number" placeholder="Todo #" />
+          <button style='margin-right: 10px' onclick="handlers.toggleCompleted()">Toggle</button>
+          <button onclick="handlers.toggleAll()">Toggle All</button>
+        </div>        
+      </div>      
+      <ul></ul>
+    </div class="container">
+    <script src="./main.js"></script>
+  </body>
+</html>
