@@ -11,6 +11,12 @@ body {
   background-image: linear-gradient(#a6c9f8, rgba(72, 190, 226, 0.712));
 }
 
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  text-decoration: underline;
+}
+
 button {
   padding: 5px 10px;
 }
@@ -50,8 +56,10 @@ li {
 
 .container {
   max-width: 100%;
-  padding: 0 20px;
+  padding: 20px;
   margin: 50px auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
 }
 
 @media (min-width: 576px) {
@@ -78,4 +86,9 @@ li {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+#error-message {
+  color: red;
+  text-align: center;
 }

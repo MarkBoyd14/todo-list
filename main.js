@@ -7,14 +7,30 @@ let todoList = {
     });
   },
   changeTodo(position, todoText) {
-    this.todos[position - 1].todoText = todoText;
+    let errorMessage = document.getElementById('error-message');
+    try {
+      this.todos[position - 1].todoText = todoText;
+      errorMessage.textContent = '';
+    } catch (error) {
+      if (position > this.todos.length || position < 1) {
+        errorMessage.textContent = 'Error: Please enter a valid todo #';
+      }
+    }
   },
   deleteTodo(position) {
     this.todos.splice(position, 1);
   },
   toggleCompleted(position) {
-    let todo = this.todos[position - 1];
-    todo.completed = !todo.completed;
+    let errorMessage = document.getElementById('error-message');
+    try {
+      let todo = this.todos[position - 1];
+      todo.completed = !todo.completed;
+      errorMessage.textContent = '';
+    } catch (error) {
+      if (position > this.todos.length || position < 1) {
+        errorMessage.textContent = 'Error: Please enter a valid todo #';
+      }
+    }
   },
 
   toggleAll() {
@@ -87,7 +103,7 @@ let view = {
       } else {
         todoTextWithCompletion = `${position + 1}. ` + '( ) ' + todo.todoText;
       }
-      todoLi.id = position;
+      todoLi.id = position + 1;
       todoLi.textContent = todoTextWithCompletion;
       todoLi.appendChild(this.createDeleteButton());
       todosUl.appendChild(todoLi);
