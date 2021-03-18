@@ -103,7 +103,7 @@ let view = {
       } else {
         todoTextWithCompletion = `${position + 1}. ` + '( ) ' + todo.todoText;
       }
-      todoLi.id = position + 1;
+      todoLi.id = position;
       todoLi.textContent = todoTextWithCompletion;
       todoLi.appendChild(this.createDeleteButton());
       todosUl.appendChild(todoLi);
