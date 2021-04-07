@@ -8,7 +8,6 @@ body {
   margin: 0 auto;
   padding: 0;
   min-height: 94vh;
-  background-image: linear-gradient(#a6c9f8, rgba(72, 190, 226, 0.712));
 }
 
 h1 {
@@ -60,6 +59,7 @@ li {
   margin: 50px auto;
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
+  border: 1px solid black;
 }
 
 @media (min-width: 576px) {
